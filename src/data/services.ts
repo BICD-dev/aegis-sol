@@ -1,26 +1,46 @@
-import { Wrench, ShieldCheck, Workflow } from 'lucide-react';
+import {
+  Wrench,
+  ShieldCheck,
+  Truck,
+  Users,
+  HardHat,
+} from 'lucide-react';
 import type { Service } from '../types/service';
 
 export const services: Service[] = [
   {
-    id: 'well-engineering',
+    id: 'well-services',
     icon: Wrench,
-    title: 'Well Engineering & Intervention',
+    title: 'Well Services & Workover',
     description:
-      'Production optimization, slickline operations, and integrated wellbore solutions engineered for maximum recovery with minimal downtime.',
+      'Intervention, completion support, and workover supervision delivered by certified field personnel to minimize downtime while maintaining strict safety standards.',
   },
   {
-    id: 'asset-integrity',
+    id: 'pipeline-integrity',
     icon: ShieldCheck,
-    title: 'Asset Integrity Management',
+    title: 'Pipeline Integrity & Maintenance',
     description:
-      'Non-Destructive Testing (NDT), corrosion control, and structural fitness-for-service assessments across the full asset lifecycle.',
+      'Inspection, corrosion monitoring, and repair programmes that keep pipeline infrastructure compliant with industry and regulatory standards.',
   },
   {
-    id: 'epc-pipeline',
-    icon: Workflow,
-    title: 'EPC Pipeline Services',
+    id: 'hse-consulting',
+    icon: HardHat,
+    title: 'HSE & Risk Consulting',
     description:
-      'Minor modifications, pipeline repairs, procurement management, and facility maintenance delivered to EPC-grade standards.',
+      'Site risk assessments, permit-to-work systems, and tailored HSE training designed to improve operational safety and regulatory compliance.',
+  },
+  {
+    id: 'equipment-rental',
+    icon: Truck,
+    title: 'Equipment Rental & Logistics',
+    description:
+      'Reliable equipment rental and logistics support for personnel and materials across onshore and swamp locations.',
+  },
+  {
+    id: 'technical-staffing',
+    icon: Users,
+    title: 'Manpower & Technical Staffing',
+    description:
+      'Provision of vetted, certified technical personnel for short-term call-outs and long-term project deployments.',
   },
 ];
