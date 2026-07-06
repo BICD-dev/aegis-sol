@@ -1,21 +1,30 @@
-import { BadgeCheck, Truck, MapPinned } from 'lucide-react';
+import { BadgeCheck, Truck, MapPinned, ShieldCheck } from 'lucide-react';
 import SectionTitle from './SectionTitle';
 
 const INDICATORS = [
   {
-    icon: BadgeCheck,
-    title: 'Technical Expertise',
-    description: 'Complex engineering problems solved by certified subject matter experts.',
+    icon: ShieldCheck,
+    title: 'Safety-First Culture',
+    description:
+      'Every project follows our Zero Compromise HSE philosophy with stop-work authority and disciplined safety procedures.',
   },
   {
-    icon: Truck,
-    title: 'Supply Chain Compliance',
-    description: 'Strict vendor qualification protocols minimizing procurement lead times.',
+    icon: BadgeCheck,
+    title: 'ISO Certified',
+    description:
+      'Operating under ISO 9001 and ISO 45001 certified management systems for quality and occupational safety.',
   },
   {
     icon: MapPinned,
-    title: 'Local Experience',
-    description: 'Deep regulatory compliance knowledge regarding NUPRC and NCDMB frameworks.',
+    title: 'Local Operating Expertise',
+    description:
+      'Extensive experience supporting operators and EPC contractors across the Niger Delta.',
+  },
+  {
+    icon: Truck,
+    title: 'Scalable Field Support',
+    description:
+      'Flexible teams, equipment, and logistics tailored to projects of varying sizes and complexity.',
   },
 ];
 
