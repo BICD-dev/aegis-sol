@@ -6,6 +6,7 @@ import WhyUs from './components/WhyUs';
 import Safety from './components/Safety';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CoreValues from './components/Values';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <About />
         <Services />
         <WhyUs />
+        <CoreValues />
         <Safety />
         <Contact />
       </main>
