@@ -18,25 +18,26 @@ export default function About() {
         <div className="order-1 lg:order-2">
           <SectionTitle eyebrow="About Aegis OSL" title="Built on Nigerian Ground. Held to Global Standards." />
 
-          <p className="mt-6 text-base font-normal leading-relaxed text-slate-600">
-            For over a decade, Aegis Oilfield Services Limited has partnered with
-            IOCs, indigenous operators, and EPC contractors across the Niger
-            Delta to keep critical infrastructure running safely and efficiently.
-            Our engineers hold the same certifications demanded on any major
-            international asset &mdash; applied with the local regulatory
-            fluency that only an indigenous partner can offer.
-          </p>
+          <p className="mt-6 text-base leading-relaxed text-slate-600">
+            Aegis Oilfield Services Limited is an independently owned oilfield services
+            company headquartered in Port Harcourt, Nigeria. We support operators and
+            EPC contractors across the Niger Delta with dependable well services,
+            pipeline integrity solutions, and HSE advisory backed by internationally
+            recognised standards.
+            </p>
 
-          <p className="mt-4 text-base font-normal leading-relaxed text-slate-600">
-            From wellhead to pipeline, we combine hands-on field discipline with
-            rigorous documentation, giving procurement and HSE teams a partner
-            they can audit with confidence.
-          </p>
+            <p className="mt-4 text-base leading-relaxed text-slate-600">
+            Built on technical reliability and an uncompromising approach to safety, our
+            certified teams combine deep local operating knowledge with disciplined
+            processes that help clients execute projects confidently, efficiently, and
+            safely.
+            </p>
 
-          <blockquote className="mt-8 border-l-4 border-steel-600 pl-4 italic text-slate-700">
-            &ldquo;Driving energy transition and structural optimization across
-            sub-Saharan Africa through indigenous technical excellence.&rdquo;
-          </blockquote>
+            <blockquote className="mt-8 border-l-4 border-steel-600 pl-4 italic text-slate-700">
+            "To be the most trusted independent oilfield services partner in the Niger
+            Delta, recognised as much for our safety record as for our technical
+            performance."
+            </blockquote>
         </div>
       </div>
     </section>
