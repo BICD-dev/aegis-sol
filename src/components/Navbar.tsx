@@ -32,7 +32,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <a href="#contact" className="hidden lg:block">
           <Button variant="dark" className="px-4 py-2 text-sm min-h-0">
-            Contact
+            Contact Us
           </Button>
         </a>
 

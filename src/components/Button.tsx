@@ -27,7 +27,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`inline-flex items-center justify-center rounded-lg px-6 py-3 min-h-[48px] font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 ${variantStyles[variant]} ${className}`}
+      className={`cursor-pointer inline-flex items-center justify-center rounded-lg px-6 py-3 min-h-[48px] font-semibold transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-500 ${variantStyles[variant]} ${className}`}
       {...props}
     >
       {children}

@@ -4,7 +4,7 @@ const FOOTER_LINKS = {
   Company: [
     { label: 'About Us', href: '#about' },
     { label: 'Why Us', href: '#why-us' },
-    { label: 'Careers', href: '#' },
+    { label: 'Core Values', href: '#core-values' },
   ],
   Services: [
     { label: 'Well Engineering & Intervention', href: '#services' },
