@@ -1,26 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+@import "tailwindcss";
 
 /*
-  CSS custom properties mirror the Tailwind tokens in tailwind.config.js.
-  Tailwind classes (bg-navy-900, text-steel-600, etc.) are the primary way
-  components consume the design system. These :root variables exist for the
-  rare cases where a raw hex is needed outside Tailwind's class system —
-  e.g. inline SVG fills/strokes, or values passed into a `style` prop
-  (see the diagonal chevron pattern in Safety.tsx).
 
-  Keep both in sync: if a color changes, update it in tailwind.config.js
-  AND here.
+  Tokens defined in @theme become Tailwind utilities automatically:
+
+    bg-navy-900
+    bg-navy-950
+    text-steel-600
+    bg-amber-500
+    hover:bg-amber-600
+    font-sans
+    max-w-7xl
+
+  The :root variables below mirror these values so they can still be used
+  outside Tailwind utilities when needed (e.g. inline SVG fills, gradients,
+  or values passed through React's `style` prop).
+
+  Keep the values in @theme and :root synchronized.
 */
+
+@theme {
+  /* Brand colors */
+  --color-navy-900: #0b2545;
+  --color-navy-950: #07172b;
+
+  --color-steel-600: #1c6ea4;
+
+  --color-amber-500: #f4a300;
+  --color-amber-600: #d99100;
+
+  /* Typography */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* Layout */
+  --container-7xl: 80rem;
+}
+
 :root {
-  --color-navy-900: #0B2545;
-  --color-navy-950: #07172B;
-  --color-steel-600: #1C6EA4;
-  --color-amber-500: #F4A300;
-  --color-amber-600: #D99100;
+  --color-navy-900: #0b2545;
+  --color-navy-950: #07172b;
+
+  --color-steel-600: #1c6ea4;
+
+  --color-amber-500: #f4a300;
+  --color-amber-600: #d99100;
 }
 
 html {
@@ -28,8 +52,9 @@ html {
 }
 
 body {
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Respect reduced-motion preferences */
@@ -37,7 +62,10 @@ body {
   html {
     scroll-behavior: auto;
   }
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
