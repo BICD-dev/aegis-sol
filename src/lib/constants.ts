@@ -26,18 +26,14 @@ export const CERTIFICATIONS = [
 
 export const OFFICES = [
   {
-    city: 'Lagos (Head Office)',
-    address: 'Plot 12, Adeola Odeku Street, Victoria Island, Lagos, Nigeria',
-  },
-  {
     city: 'Port Harcourt (Operations Base)',
-    address: 'Km 4, East-West Road, Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria',
+    address: 'Trans-Amadi Industrial Layout, Port Harcourt, Rivers State, Nigeria',
   },
 ] as const;
 
 export const CONTACT_DETAILS = {
-  email: 'enquiries@aegisosl.com',
-  phone: '+234 1 234 5678',
+  email: ' info@aegisosl.example',
+  phone: '+234 800 000 0000',
 } as const;
 
 export const SERVICE_AREAS = [
