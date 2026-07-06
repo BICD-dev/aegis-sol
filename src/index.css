@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  CSS custom properties mirror the Tailwind tokens in tailwind.config.js.
+  Tailwind classes (bg-navy-900, text-steel-600, etc.) are the primary way
+  components consume the design system. These :root variables exist for the
+  rare cases where a raw hex is needed outside Tailwind's class system —
+  e.g. inline SVG fills/strokes, or values passed into a `style` prop
+  (see the diagonal chevron pattern in Safety.tsx).
+
+  Keep both in sync: if a color changes, update it in tailwind.config.js
+  AND here.
+*/
+:root {
+  --color-navy-900: #0B2545;
+  --color-navy-950: #07172B;
+  --color-steel-600: #1C6EA4;
+  --color-amber-500: #F4A300;
+  --color-amber-600: #D99100;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
