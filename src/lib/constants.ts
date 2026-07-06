@@ -10,7 +10,7 @@ export const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Core Values', href: '#core-values' },
-  { label: 'HSE', href: '#hse' },
+  { label: 'Safety( HSE )', href: '#hse' },
 ] as const;
 
 export const TRUST_STATS = [
