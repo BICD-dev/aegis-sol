@@ -1,75 +1,30 @@
-# React + TypeScript + Vite
+# Aegis Oilfield Services Limited — Homepage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page marketing site built as a developer intern assessment.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 18 + TypeScript** — component structure, typed props/data
+- **Vite** — build tooling and dev server
+- **Tailwind CSS v4** (`@tailwindcss/vite` plugin) — utility-first styling, custom design tokens (`navy`, `steel`, `amber`) extended in the Tailwind config
+- **lucide-react** — icon set (per spec: "crisp, uniform vector strokes")
+- **Inter** (Google Fonts) — typeface specified in the design system
 
-## React Compiler
+No backend, router, or state management library was used — the brief is a single static page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Assumptions Made
 
-## Expanding the ESLint configuration
+- **Contact form** submits nowhere yet — it's wired up with local state and validation-ready markup, but needs a real endpoint (e.g. Formspree, a serverless function, or a CRM webhook).
+- **Certification badges** (ISO 9001, ISO 45001) are treated as text/visual claims only, not linked to verifiable certificates.
+- Interpreted "Why Choose Us" as warranting its own component (`WhyUs.tsx`) since it's structurally and visually distinct from Services in the document specifications.
+- Assumed desktop-first content priority with the mobile breakpoint collapsing to single-column stacks.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## What I'd Improve With More Time
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+- **Real content**: licensed photography, verified certifications, and legal copy (privacy policy/terms currently link to `#`).
+- **Form backend + validation**: server-side handling, inline field validation, honeypot/spam protection.
+- **Accessibility pass**: full keyboard-navigation testing, ARIA labeling audit, and color-contrast verification against WCAG AAA (the spec asks for it explicitly on the hero).
+- **Motion**: subtle scroll-triggered reveals for sections (e.g. Framer Motion) to match the "premium corporate" feel the spec is going for — currently the only interactivity is hover/focus states.
+- **Testing**: component tests (Vitest + React Testing Library) and a basic Lighthouse/CI check for performance and accessibility regressions.
+- **Content management**: move copy (services, stats, offices) out of `constants.ts`/`services.ts` into a CMS or JSON-driven config if this were to be maintained by non-developers.
+- **SEO/meta**: `<title>`, meta description, Open Graph tags, and a favicon — none of which were in scope of the visual spec but matter for a real launch.
