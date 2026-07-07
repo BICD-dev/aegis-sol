@@ -52,7 +52,10 @@ export default function WhyUs() {
           {INDICATORS.map((item) => {
             const Icon = item.icon;
             return (
-              <div key={item.title}>
+              <div
+                key={item.title}
+                className="rounded-xl border border-gray-200 p-8 shadow-sm sm:border-none sm:p-0 sm:shadow-none"
+              >
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-steel-600/10 text-steel-600">
                   <Icon size={24} strokeWidth={2} aria-hidden="true" />
                 </div>
@@ -60,9 +63,9 @@ export default function WhyUs() {
                 <p className="mt-2 text-base font-normal leading-relaxed text-slate-600">
                   {item.description}
                 </p>
-              </div>
-            );
-          })}
+            </div>
+                );
+              })}
         </div>
       </div>
     </section>
